@@ -22,7 +22,7 @@ spec:
             volumeMounts:
             - name: ssh-key
               readOnly: true
-              mountPath: "/app/keys/robokey"                  
+              mountPath: "/app/keys/"                  
             command:
             - /bin/sh
             - -c
