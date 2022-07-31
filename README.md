@@ -3,7 +3,7 @@
 ## Simple python script to scrape last time dustbin was cycled from valetudo-enabled vacuums (tested on S50)
 >Does this by scraping last access time on the bin_in.wav (bin installed sound). 
 
->Will pop up in home-assistant under the same device, given that the same "DEVICENAME" will be used between this and valetudo!
+>Will pop up in home-assistant under the same device as your exisiting valetudo MQTT-device, given that the same "DEVICENAME" is used between this and valetudo!
 #### Config variables:
 | Variable name  |  Description | Default value  | Required |
 |---|---|---|---|
