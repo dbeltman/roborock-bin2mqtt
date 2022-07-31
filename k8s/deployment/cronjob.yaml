@@ -8,6 +8,10 @@ spec:
     spec:
       template:
         spec:
+          volumes:
+          - name: ssh-key
+            secret:
+              secretName: bin2mqtt-ssh-key        
           containers:
           - name: scraper-container
             image: ghcr.io/dbeltman/roborock-bin2mqtt:develop
@@ -16,7 +20,7 @@ spec:
             - secretRef:
                 name: bin2mqtt-secret      
             volumeMounts:
-            - name: bin2mqtt-ssh-key
+            - name: ssh-key
               readOnly: true
               mountPath: "/app/keys/robokey"                  
             # command:
