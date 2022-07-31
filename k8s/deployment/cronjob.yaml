@@ -14,7 +14,11 @@ spec:
             imagePullPolicy: IfNotPresent
             envFrom:
             - secretRef:
-                name: bin2mqtt-secret        
+                name: bin2mqtt-secret      
+            volumeMounts:
+            - name: bin2mqtt-ssh-key
+              readOnly: true
+              mountPath: "/app/keys/robokey"                  
             # command:
             # - /bin/sh
             # - -c
