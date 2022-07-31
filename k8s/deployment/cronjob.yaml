@@ -23,10 +23,10 @@ spec:
             - name: ssh-key
               readOnly: true
               mountPath: "/app/keys/robokey"                  
-            # command:
-            # - /bin/sh
-            # - -c
-            # - date; echo Hello from the Kubernetes cluster
+            command:
+            - /bin/sh
+            - -c
+            - find /app
           restartPolicy: OnFailure
           imagePullSecrets:
             - name: docker-credentials
