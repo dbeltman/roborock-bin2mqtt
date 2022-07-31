@@ -1,6 +1,6 @@
 # roborock-bin2mqtt
 
-## Simple python script to scrape last time dustbin was cycled from valetudo-enabled vacuums (tested on S50)
+## Simple python script to scrape last time dustbin was cycled from valetudo-enabled vacuums, and push to MQTT (Home assistant support) (tested on S50)
 >Does this by scraping last access time on the bin_in.wav (bin installed sound). 
 
 >Will pop up in home-assistant under the same device as your exisiting valetudo MQTT-device, given that the same "DEVICENAME" is used between this and valetudo!
