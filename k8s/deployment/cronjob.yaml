@@ -23,10 +23,10 @@ spec:
             - name: ssh-key
               readOnly: true
               mountPath: "/app/keys/"                  
-            command:
-            - /bin/sh
-            - -c
-            - find /app
+            # command:
+            # - /bin/sh
+            # - -c
+            # - find /app
           restartPolicy: OnFailure
           imagePullSecrets:
             - name: docker-credentials
