@@ -31,7 +31,7 @@ kubectl -n $namespace create secret generic ssh-key --from-file=robokey=<path-to
 
     - Add the following line:
         
-        `05 */6 * * * docker run -e DEVICENAME=<yourdevicename> -e ROBOROCKHOST=<vauum-host> -e MQTTHOST=<mqtt-host> -e MQTTPASSWORD=<mqtt-password> -e MQTTUSER=<mqtt-user> dockerdaan/roborock-bin2mqtt:develop`
+        `05 */6 * * * docker run -e DEVICENAME=<yourdevicename> -e ROBOROCKHOST=<vauum-host> -e MQTTHOST=<mqtt-host> -e MQTTPASSWORD=<mqtt-password> -e MQTTUSER=<mqtt-user> ghcr.io/dbeltman/roborock-bin2mqtt:develop`
 > Use [crontab.guru](https://crontab.guru/#05_*/6_*_*_*) to make a cronjob yourself, with explainations and schedules.
 
 #### Config variables:
