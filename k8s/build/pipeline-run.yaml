@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: clone-build-push-run-v1
+  name: clone-build-push-run-v2
   namespace: tekton-system
 spec:
   pipelineRef:
@@ -23,4 +23,4 @@ spec:
   - name: repo-url
     value: https://github.com/dbeltman/roborock-bin2mqtt.git
   - name: image-reference
-    value: ghcr.io/dbeltman/bin2mqtt:develop
+    value: https://ghcr.io/dbeltman/roborock-bin2mqtt:develop
