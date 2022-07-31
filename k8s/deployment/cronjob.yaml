@@ -12,6 +12,9 @@ spec:
           - name: scraper-container
             image: ghcr.io/dbeltman/bin2mqtt:develop
             imagePullPolicy: IfNotPresent
+            envFrom:
+            - secretRef:
+                name: bin2mqtt-secret        
             # command:
             # - /bin/sh
             # - -c
