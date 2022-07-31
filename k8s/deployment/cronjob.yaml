@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: scraper-container
-            image: ghcr.io/dbeltman/bin2mqtt:develop
+            image: ghcr.io/dbeltman/roborock-bin2mqtt:develop
             imagePullPolicy: IfNotPresent
             envFrom:
             - secretRef:
