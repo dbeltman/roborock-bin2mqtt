@@ -33,5 +33,7 @@ def get_metrics():
         return emptydate
     except ValueError:
         print("Date was not present in command output string..")
+        exit(1)
     except:
-        print("Something else went wrong parsing date")            
+        print("Something else went wrong parsing date") 
+        exit(1)           

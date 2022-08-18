@@ -27,6 +27,7 @@ def publish(topic, payload):
                         auth={'username':mqtt_username, 'password':mqtt_password})
     except:
         print("ERROR: Something went wrong publishing '" + str(payload) + "' to topic '" + str(topic) + "'!")
+        exit(1)
 
 def publish_config():
     # try:       
