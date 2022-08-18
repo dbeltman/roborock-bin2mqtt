@@ -53,9 +53,15 @@ def on_connect(client, userdata, flags, rc):
     #     print("ERROR: Something went wrong subscribing to " + str(mqtt_subscribe_topics))
 
 def init_connect():
-    client = mqtt.Client(mqtt_client_name)
-    client.on_connect = on_connect 
-    client.username_pw_set(mqtt_username, mqtt_password)
-    client.connect(mqtt_host, mqtt_port, 60)
+    try:
+        client = mqtt.Client(mqtt_client_name)
+        client.on_connect = on_connect 
+        client.username_pw_set(mqtt_username, mqtt_password)
+        client.connect(mqtt_host, mqtt_port, 60)
+    except ConnectionRefusedError:
+        print("Connection refused. Check MQTT Settings!")
+        exit(1)
+    finally:
+        print("MQTT Connection attempt finished")
 
 
