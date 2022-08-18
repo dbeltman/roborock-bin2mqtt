@@ -4,9 +4,9 @@ metadata:
   name: scrape-vacuum-bin
 spec:
   schedule: "05 */6 * * *"
+  successfulJobsHistoryLimit: 4 
   jobTemplate:
     spec:
-      successfulJobsHistoryLimit : 1 
       template:
         spec:
           volumes:
