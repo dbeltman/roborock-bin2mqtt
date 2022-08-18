@@ -54,14 +54,14 @@ def on_connect(client, userdata, flags, rc):
 
 def init_connect():
     try:
+        print("Connecting to MQTT Server...")
         client = mqtt.Client(mqtt_client_name)
         client.on_connect = on_connect 
         client.username_pw_set(mqtt_username, mqtt_password)
         client.connect(mqtt_host, mqtt_port, 60)
     except ConnectionRefusedError:
-        print("Connection refused. Check MQTT Settings!")
+        print("Connection with MQTT-Server refused. Check MQTT connection settings!")
+        print("Exiting...")
         exit(1)
-    finally:
-        print("MQTT Connection attempt finished")
 
 
