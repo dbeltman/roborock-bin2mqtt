@@ -15,7 +15,7 @@ spec:
               secretName: bin2mqtt-ssh-key        
           containers:
           - name: scraper-container
-            image: ghcr.io/dbeltman/roborock-bin2mqtt:develop
+            image: ghcr.io/dbeltman/roborock-bin2mqtt:develop-1.2
             imagePullPolicy: IfNotPresent
             envFrom:
             - secretRef:
