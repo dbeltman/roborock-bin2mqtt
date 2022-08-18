@@ -6,9 +6,9 @@ spec:
   schedule: "05 */6 * * *"
   jobTemplate:
     spec:
+      successfulJobsHistoryLimit : 1 
       template:
         spec:
-          successfulJobsHistoryLimit : 1 
           volumes:
           - name: ssh-key
             secret:
