@@ -37,5 +37,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/dbeltman/roborock-bin2mqtt:stable-v1.0-${{ github.run_attempt }}
+          tags: ghcr.io/dbeltman/roborock-bin2mqtt:stable-v1.0.${{ github.run_number }}
           labels: ${{ steps.meta.outputs.labels }}
