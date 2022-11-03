@@ -37,5 +37,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: stable-v0.${{ github.run_attempt }}
           labels: ${{ steps.meta.outputs.labels }}
